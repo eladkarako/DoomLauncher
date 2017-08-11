@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>930c247f-8739-4aaa-850d-52643fce03d8</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>DoomLauncher</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="Equin.ApplicationFramework.BindingListView" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="CheckBoxComboBox" />
+    <Reference Include="WadReader" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Data.SQLite" />
+    <Reference Include="System.Configuration" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="DoomLauncher\WadArchiveDataAdapter.cs" />
+    <Compile Include="DoomLauncher\AddFileType.cs" />
+    <Compile Include="DoomLauncher\ConfigType.cs" />
+    <Compile Include="DoomLauncher\BasicFileView.cs" />
+    <Compile Include="DoomLauncher\FilesCtrl.cs" />
+    <Compile Include="DoomLauncher\AdditionalFilesEventHanlder.cs" />
+    <Compile Include="DoomLauncher\AdditionalFilesEventArgs.cs" />
+    <Compile Include="DoomLauncher\CumulativeStats.cs" />
+    <Compile Include="DoomLauncher\StatisticsView.cs" />
+    <Compile Include="DoomLauncher\LauncherPath.cs" />
+    <Compile Include="DoomLauncher\BoomStatsReader.cs" />
+    <Compile Include="DoomLauncher\AppVersion.cs" />
+    <Compile Include="DoomLauncher\ColumnConfig.cs" />
+    <Compile Include="DoomLauncher\StatsDataSource.cs" />
+    <Compile Include="DoomLauncher\DraggableTabControl.cs" />
+    <Compile Include="DoomLauncher\FileType.cs" />
+    <Compile Include="DoomLauncher\FileDetailsEditForm.cs" />
+    <Compile Include="DoomLauncher\GameFileViewHandler.cs" />
+    <Compile Include="DoomLauncher\SplashScreen.cs" />
+    <Compile Include="DoomLauncher\RatingControl.cs" />
+    <Compile Include="DoomLauncher\MainForm.cs" />
+    <Compile Include="DoomLauncher\IStatsDataSource.cs" />
+    <Compile Include="DoomLauncher\TagEdit.cs" />
+    <Compile Include="DoomLauncher\TagForm.cs" />
+    <Compile Include="DoomLauncher\SpecificFilesForm.cs" />
+    <Compile Include="DoomLauncher\MetaDataForm.cs" />
+    <Compile Include="DoomLauncher\InvalidFile.cs" />
+    <Compile Include="DoomLauncher\CNDoomStatsReader.cs" />
+    <Compile Include="DoomLauncher\NewStatisticsEventHandler.cs" />
+    <Compile Include="DoomLauncher\IStatisticsReader.cs" />
+    <Compile Include="DoomLauncher\NewStatisticsEventArgs.cs" />
+    <Compile Include="DoomLauncher\StatFileScanner.cs" />
+    <Compile Include="DoomLauncher\ZDoomStatsReader.cs" />
+    <Compile Include="DoomLauncher\StatsInfo.cs" />
+    <Compile Include="DoomLauncher\StatsControl.cs" />
+    <Compile Include="DoomLauncher\SyncStatusForm.cs" />
+    <Compile Include="DoomLauncher\SyncFileData.cs" />
+    <Compile Include="DoomLauncher\SyncFileOption.cs" />
+    <Compile Include="DoomLauncher\LocalTabViewCtrl.cs" />
+    <Compile Include="DoomLauncher\IdGamesTabViewCtrl.cs" />
+    <Compile Include="DoomLauncher\BasicTabViewCtrl.cs" />
+    <Compile Include="DoomLauncher\AboutBox.cs" />
+    <Compile Include="DoomLauncher\AppConfiguration.cs" />
+    <Compile Include="DoomLauncher\FileDataSource.cs" />
+    <Compile Include="DoomLauncher\GameFilePlayAdaper.cs" />
+    <Compile Include="DoomLauncher\IdGamesDataAdapater.cs" />
+    <Compile Include="DoomLauncher\GameFileEdit.cs" />
+    <Compile Include="DoomLauncher\GenericFileView.cs" />
+    <Compile Include="DoomLauncher\DownloadView.cs" />
+    <Compile Include="DoomLauncher\DownloadViewItem.cs" />
+    <Compile Include="DoomLauncher\FileSelectForm.cs" />
+    <Compile Include="DoomLauncher\DownloadForm.cs" />
+    <Compile Include="DoomLauncher\SettingsForm.cs" />
+    <Compile Include="DoomLauncher\SaveGameHandler.cs" />
+    <Compile Include="DoomLauncher\OptionsTabViewCtrl.cs" />
+    <Compile Include="DoomLauncher\IWadTabViewCtrl.cs" />
+    <Compile Include="DoomLauncher\GameFileGetOptions.cs" />
+    <Compile Include="DoomLauncher\DemoHandler.cs" />
+    <Compile Include="DoomLauncher\DownloadHandler.cs" />
+    <Compile Include="DoomLauncher\GameFileEditForm.cs" />
+    <Compile Include="DoomLauncher\GameFileAssociationView.cs" />
+    <Compile Include="DoomLauncher\IGameFileGetOptions.cs" />
+    <Compile Include="DoomLauncher\IWadDataSource.cs" />
+    <Compile Include="DoomLauncher\NewFileDetector.cs" />
+    <Compile Include="DoomLauncher\ScreenshotHandler.cs" />
+    <Compile Include="DoomLauncher\RequestScreenshotsEventArgs.cs" />
+    <Compile Include="DoomLauncher\ScreenshotView.cs" />
+    <Compile Include="DoomLauncher\ProgressBarForm.cs" />
+    <Compile Include="DoomLauncher\OrderType.cs" />
+    <Compile Include="DoomLauncher\GameFileSearchOp.cs" />
+    <Compile Include="DoomLauncher\GameFileSearchField.cs" />
+    <Compile Include="DoomLauncher\GameFileFieldType.cs" />
+    <Compile Include="DoomLauncher\GameFileViewControl.cs" />
+    <Compile Include="DoomLauncher\GameFileSummary.cs" />
+    <Compile Include="DoomLauncher\GrowLabel.cs" />
+    <Compile Include="DoomLauncher\PlayForm.cs" />
+    <Compile Include="DoomLauncher\TableLayoutPanelDB.cs" />
+    <Compile Include="DoomLauncher\CDataGridView.cs" />
+    <Compile Include="DoomLauncher\DataAccess.cs" />
+    <Compile Include="DoomLauncher\DbDataSourceAdapter.cs" />
+    <Compile Include="DoomLauncher\DirectoryDataSourceAdapter.cs" />
+    <Compile Include="DoomLauncher\MSSQLDataAdapter.cs" />
+    <Compile Include="DoomLauncher\SqliteDatabaseAdapter.cs" />
+    <Compile Include="DoomLauncher\Program.cs" />
+    <Compile Include="DoomLauncher\SearchControl.cs" />
+    <Compile Include="DoomLauncher\SyncLibraryHandler.cs" />
+    <Compile Include="DoomLauncher\SourcePortViewForm.cs" />
+    <Compile Include="DoomLauncher\SourcePortEditForm.cs" />
+    <Compile Include="DoomLauncher\SourcePortEdit.cs" />
+    <Compile Include="DoomLauncher\TabHandler.cs" />
+    <Compile Include="DoomLauncher\TagTabView.cs" />
+    <Compile Include="DoomLauncher\TagControl.cs" />
+    <Compile Include="DoomLauncher\TagEditForm.cs" />
+    <Compile Include="DoomLauncher\TagMapLookup.cs" />
+    <Compile Include="DoomLauncher\TextBoxForm.cs" />
+    <Compile Include="DoomLauncher\ToolTipHandler.cs" />
+    <Compile Include="DoomLauncher\TxtGenerator.cs" />
+    <Compile Include="DoomLauncher\Util.cs" />
+    <Compile Include="DoomLauncher\VersionHandler.cs" />
+    <Compile Include="DoomLauncher\ZdlParser.cs" />
+    <Compile Include="DoomLauncher\Properties\Resources.cs" />
+    <Compile Include="DoomLauncher\Properties\Settings.cs" />
+    <Compile Include="DoomLauncher\TextFileParsers\IdGamesTextFileParser.cs" />
+    <Compile Include="DoomLauncher\Forms\MessageCheckBox.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IStatsDataSourceAdapter.cs" />
+    <Compile Include="DoomLauncher\Interfaces\ITagDataSource.cs" />
+    <Compile Include="DoomLauncher\Interfaces\ITagMappingDataSource.cs" />
+    <Compile Include="DoomLauncher\Interfaces\ITagMapLookup.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IConfigurationDataSource.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IConfigurationDataSourceAdapter.cs" />
+    <Compile Include="DoomLauncher\Interfaces\ITabView.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IFileAssociationView.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IIWadDataSourceAdapter.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IFileDataSource.cs" />
+    <Compile Include="DoomLauncher\Interfaces\INewFileDetector.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IDataSourceAdapter.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IGameFileDownloadable.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IDatabaseAdapter.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IGameFileDataSourceAdapter.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IGameFileDataSource.cs" />
+    <Compile Include="DoomLauncher\Interfaces\IIWadDataSource.cs" />
+    <Compile Include="DoomLauncher\Interfaces\ISourcePortDataSource.cs" />
+    <Compile Include="DoomLauncher\Interfaces\ITextFileParser.cs" />
+    <Compile Include="DoomLauncher\DataSources\WadArchiveFileDataSource.cs" />
+    <Compile Include="DoomLauncher\DataSources\WadArchiveGameFileDataSource.cs" />
+    <Compile Include="DoomLauncher\DataSources\ScreenshotItem.cs" />
+    <Compile Include="DoomLauncher\DataSources\TagDataSource.cs" />
+    <Compile Include="DoomLauncher\DataSources\TagMappingDataSource.cs" />
+    <Compile Include="DoomLauncher\DataSources\ConfigurationDataSource.cs" />
+    <Compile Include="DoomLauncher\DataSources\IdGamesGameFileDataSource.cs" />
+    <Compile Include="DoomLauncher\DataSources\SourcePortDataSource.cs" />
+    <Compile Include="DoomLauncher\DataSources\GameFileDataSource.cs" />
+    <EmbeddedResource Include="DoomLauncher.FilesCtrl.resources" />
+    <EmbeddedResource Include="DoomLauncher.StatisticsView.resources" />
+    <EmbeddedResource Include="DoomLauncher.StatsControl.resources" />
+    <EmbeddedResource Include="DoomLauncher.CumulativeStats.resources" />
+    <EmbeddedResource Include="DoomLauncher.FileDetailsEditForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.Forms.MessageCheckBox.resources" />
+    <EmbeddedResource Include="DoomLauncher.MetaDataForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.SplashScreen.resources" />
+    <EmbeddedResource Include="DoomLauncher.RatingControl.resources" />
+    <EmbeddedResource Include="DoomLauncher.SpecificFilesForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.StatsInfo.resources" />
+    <EmbeddedResource Include="DoomLauncher.TextBoxForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.SyncStatusForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.BasicTabViewCtrl.resources" />
+    <EmbeddedResource Include="DoomLauncher.AboutBox.resources" />
+    <EmbeddedResource Include="DoomLauncher.GenericFileView.resources" />
+    <EmbeddedResource Include="DoomLauncher.DownloadView.resources" />
+    <EmbeddedResource Include="DoomLauncher.DownloadViewItem.resources" />
+    <EmbeddedResource Include="DoomLauncher.DownloadForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.FileSelectForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.GameFileEditForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.MainForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.GameFileViewControl.resources" />
+    <EmbeddedResource Include="DoomLauncher.GameFileSummary.resources" />
+    <EmbeddedResource Include="DoomLauncher.GameFileEdit.resources" />
+    <EmbeddedResource Include="DoomLauncher.GameFileAssociationView.resources" />
+    <EmbeddedResource Include="DoomLauncher.ProgressBarForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.SettingsForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.SourcePortViewForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.Properties.Resources.resources" />
+    <EmbeddedResource Include="DoomLauncher.PlayForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.SearchControl.resources" />
+    <EmbeddedResource Include="DoomLauncher.RequestScreenshotsEventArgs.resources" />
+    <EmbeddedResource Include="DoomLauncher.SourcePortEditForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.SourcePortEdit.resources" />
+    <EmbeddedResource Include="DoomLauncher.TagControl.resources" />
+    <EmbeddedResource Include="DoomLauncher.TagEdit.resources" />
+    <EmbeddedResource Include="DoomLauncher.TagForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.TagEditForm.resources" />
+    <EmbeddedResource Include="DoomLauncher.TxtGenerator.resources" />
+  </ItemGroup>
+</Project>
